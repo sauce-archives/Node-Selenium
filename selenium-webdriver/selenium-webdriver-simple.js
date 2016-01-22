@@ -1,8 +1,8 @@
-var webdriver = require('selenium-webdriver'),
-    username = YOUR_USERNAME,
-    accessKey = YOUR_ACCESS_KEY,
+var webdriver = require('selenium-webdriver'), // muse use selenium-webdriver version <=2.47.0
+    username = "YOUR_SAUCE_USERNAME",
+    accessKey = "YOUR_SAUCE_ACCESS_KEY",
     driver;
- 
+
 driver = new webdriver.Builder().
   withCapabilities({
     'browserName': 'chrome',
@@ -14,11 +14,11 @@ driver = new webdriver.Builder().
   usingServer("http://" + username + ":" + accessKey +
               "@ondemand.saucelabs.com:80/wd/hub").
   build();
- 
+
 driver.get('http://saucelabs.com/test/guinea-pig');
- 
+
 driver.getTitle().then(function (title) {
     console.log("title is: " + title);
 });
- 
+
 driver.quit();
