@@ -1,4 +1,4 @@
-var webdriver = require('selenium-webdriver'), // muse use selenium-webdriver version <=2.47.0
+var webdriver = require('selenium-webdriver'),
     username = "YOUR_SAUCE_USERNAME",
     accessKey = "YOUR_SAUCE_ACCESS_KEY",
     driver;
@@ -11,8 +11,8 @@ driver = new webdriver.Builder().
     'username': username,
     'accessKey': accessKey
   }).
-  usingServer("http://" + username + ":" + accessKey +
-              "@ondemand.saucelabs.com:80/wd/hub").
+  usingServer("https://" + username + ":" + accessKey +
+              "@ondemand.saucelabs.com:443/wd/hub").
   build();
 
 driver.get('http://saucelabs.com/test/guinea-pig');
