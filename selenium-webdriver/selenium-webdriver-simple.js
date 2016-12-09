@@ -11,8 +11,8 @@ driver = new webdriver.Builder().
     'username': username,
     'accessKey': accessKey
   }).
-  usingServer("https://" + username + ":" + accessKey +
-              "@ondemand.saucelabs.com:443/wd/hub").
+  usingServer("http://" + username + ":" + accessKey +
+              "@ondemand.saucelabs.com:80/wd/hub").
   build();
 
 driver.get('http://saucelabs.com/test/guinea-pig');
