@@ -15,7 +15,7 @@ driver = new webdriver.Builder().
               "@ondemand.saucelabs.com:80/wd/hub").
   build();
 
-driver.get('http://saucelabs.com/test/guinea-pig');
+driver.get("http://saucelabs.com/test/guinea-pig");
 
 driver.getTitle().then(function (title) {
     console.log("title is: " + title);
