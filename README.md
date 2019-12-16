@@ -1,3 +1,6 @@
+> **NOTE:<br/>**
+> This project is no longer maintained
+
 # Node-Selenium
 Node.js scripts used in the Sauce Labs DOCS wiki
 
